@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalvi Compiler</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+    <h2>Kalvi Compiler</h2>
+    <ul class="Navbar_links">
+        <li id="li_drpdown">
+            <label class="dropdown">Select language :
+
+                <select name="language" onchange="languageSelector(this.value);">
+                    <option value="python" selected>Python</option>
+                    <option value="kotlin">Kotlin</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                </select>
+            </label>
+        </li>
+        <li>
+            <button type="button" onclick="executeCode()"><i class='bx bx-play'></i></button>
+        </li>
+    </ul>
+</header>
+<div class="code_editor">
+    <label>
+        <textarea id="code">Write your code here...</textarea>
+    </label>
+
+    <label>
+        <textarea id="output" disabled>Your Output Goes Here...</textarea>
+    </label>
+</div>
+</body>
+<script src="main.js"></script>
+</html>
